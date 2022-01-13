@@ -2,3 +2,6 @@ torch
 pillow
 numpy
 click
+scipy
+imageio
+imgui
