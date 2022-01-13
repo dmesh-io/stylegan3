@@ -15,7 +15,7 @@ class ModelWrapper(nn.Module):
             self.model = legacy.load_network_pkl(f)['G_ema'].to("cpu")
         self.add_module("model", self.model)
 
-    def forward(self, x: dict) -> torch.tensor:
+    def forward(self, x: dict, input_parameters: dict) -> torch.tensor:
         z = x.get("z")
         c = x.get("c")
 
